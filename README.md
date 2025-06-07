@@ -32,8 +32,8 @@ npm install -g mcp-image-downloader
 ### 方式三：本地开发安装
 
 ```bash
-git clone <repository-url>
-cd testmcp
+git clone https://github.com/cced3000/mcp-image-downloader.git
+cd mcp-image-downloader
 npm install
 ```
 
