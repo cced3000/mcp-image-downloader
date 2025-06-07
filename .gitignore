@@ -136,6 +136,12 @@ test-output/
 tasks.json
 tasks/
 
+# Task runner
+.cursor/
+.roo/
+.taskmster/
+config/
+
 # MCP specific
 .mcp/
 mcp-*.log
