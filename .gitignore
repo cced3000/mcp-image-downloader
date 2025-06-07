@@ -134,13 +134,18 @@ test-output/
 
 # Task files
 tasks.json
-tasks/
+tasks
 
-# Task runner
-.cursor/
-.roo/
-.taskmster/
+# Task runner and development tools
+.cursor
+.roo
+.taskmaster/
 config/
+tests/
+
+# Development configuration files
+.roomodes
+.windsurfrules
 
 # MCP specific
 .mcp/
