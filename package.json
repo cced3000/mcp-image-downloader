@@ -3,6 +3,25 @@
   "version": "1.0.0",
   "description": "MCP server for downloading and processing images from URLs",
   "main": "src/index.js",
+  "bin": {
+    "mcp-image-downloader": "src/index.js"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    ".env.example"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cced3000/mcp-image-downloader.git"
+  },
+  "homepage": "https://github.com/cced3000/mcp-image-downloader#readme",
+  "bugs": {
+    "url": "https://github.com/cced3000/mcp-image-downloader/issues"
+  },
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
@@ -20,7 +39,7 @@
     "processing",
     "batch"
   ],
-  "author": "",
+  "author": "yekyos",
   "license": "ISC",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
