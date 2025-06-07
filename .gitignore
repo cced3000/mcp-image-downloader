@@ -137,8 +137,8 @@ tasks.json
 tasks
 
 # Task runner and development tools
-.cursor
-.roo
+.cursor/
+.roo/
 .taskmaster/
 config/
 tests/
