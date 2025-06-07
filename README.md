@@ -15,9 +15,36 @@
 
 ## 安装
 
+### 方式一：通过 npx 安装（推荐）
+
+直接使用 npx 运行，无需本地安装：
+
 ```bash
+npx mcp-image-downloader
+```
+
+### 方式二：全局安装
+
+```bash
+npm install -g mcp-image-downloader
+```
+
+### 方式三：本地开发安装
+
+```bash
+git clone <repository-url>
+cd testmcp
 npm install
 ```
+
+### npx 的优势
+
+使用 npx 方式有以下优势：
+- ✅ 无需本地安装，始终使用最新版本
+- ✅ 自动处理依赖关系
+- ✅ 减少本地存储空间占用
+- ✅ 避免版本冲突问题
+- ✅ 配置更简单，无需指定路径
 
 ## 配置
 
@@ -47,7 +74,32 @@ cp .env.example .env
 
 #### Cursor IDE 配置
 
+**使用 npx（推荐）：**
+
 在 `.cursor/mcp.json` 中添加：
+
+```json
+{
+  "mcpServers": {
+    "image-downloader": {
+      "command": "npx",
+      "args": ["mcp-image-downloader"],
+      "env": {
+        "DEFAULT_SAVE_PATH": "/Users/username/Downloads/images",
+        "DEFAULT_FORMAT": "jpeg",
+        "DEFAULT_COMPRESS": "true",
+        "HTTPS_PROXY": "http://proxy.example.com:8080",
+        "DEFAULT_MAX_WIDTH": "1920",
+        "DEFAULT_MAX_HEIGHT": "1080",
+        "DEFAULT_CONCURRENCY": "5",
+        "HTTP_PROXY": "http://proxy.example.com:8080"
+      }
+    }
+  }
+}
+```
+
+**使用本地安装：**
 
 ```json
 {
@@ -73,7 +125,28 @@ cp .env.example .env
 
 #### Claude Desktop 配置
 
+**使用 npx（推荐）：**
+
 在 `claude_desktop_config.json` 中添加：
+
+```json
+{
+  "mcpServers": {
+    "image-downloader": {
+      "command": "npx",
+      "args": ["mcp-image-downloader"],
+      "env": {
+        "DEFAULT_SAVE_PATH": "/Users/username/Downloads/images",
+        "DEFAULT_FORMAT": "jpeg",
+        "DEFAULT_COMPRESS": "true",
+        "HTTPS_PROXY": "http://proxy.example.com:8080"
+      }
+    }
+  }
+}
+```
+
+**使用本地安装：**
 
 ```json
 {
@@ -95,7 +168,13 @@ cp .env.example .env
 
 ## 使用方法
 
-### 启动服务器
+### 通过 MCP 客户端使用
+
+配置好 MCP 客户端后，可以直接在支持 MCP 的应用中使用图片下载功能。
+
+### 本地开发和测试
+
+#### 启动服务器
 
 ```bash
 npm start
